@@ -21,12 +21,15 @@ for i in range(0, dataLength) :
     diff = (data[i] - mean)
     sd = sd + (diff * diff)
 sd = sd / dataLength
+print('sd', sd)
 
 variance = 0
 for element in data :
-    variance = (element - mean) ** 2
+    variance += (element - mean) ** 2
 
 variance = variance / dataLength
+
+print('standard deviation:', math.sqrt(variance))
 
 print(mean)
 print(median)

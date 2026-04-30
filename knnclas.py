@@ -2,14 +2,17 @@
 from sklearn.datasets import load_iris
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.model_selection import train_test_split
+
 # Step 2: Load the Iris dataset
 data = load_iris()
 X = data.data # Feature matrix
 y = data.target # Target labels
+
 # Step 3: Split dataset into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(
  X, y, test_size=0.3, random_state=42
 )
+
 # Step 4: Create KNN classifier with K=5
 model = KNeighborsClassifier(n_neighbors=5)
 # Step 5: Train the model
